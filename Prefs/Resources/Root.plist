@@ -18,7 +18,7 @@
 			<key>key</key>
 			<string>App</string>
 			<key>label</key>
-			<string>Enabled app</string>
+			<string>Enabled Apps</string>
 			<key>sections</key>
 			<array>
 				<dict>
@@ -41,13 +41,13 @@
 			<key>key</key>
 			<string>customFpsEnabled</string>
 			<key>label</key>
-			<string>Use custom FPS (respring required)</string>
+			<string>Use Custom FPS (respring required)</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSSliderSpecifier</string>
 			<key>label</key>
-			<string>Custom fps</string>
+			<string>Custom FPS</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -61,7 +61,7 @@
 			<key>key</key>
 			<string>customFPS</string>
 			<key>label</key>
-			<string>Custom fps</string>
+			<string>Custom FPS</string>
 			<key>max</key>
 			<integer>120</integer>
 			<key>min</key>
@@ -73,7 +73,13 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>If disabled, the tweak will choose the highest fps available</string>
+			<string>If disabled, the tweak will choose the highest FPS available</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>FPS Label Customization</string>
 		</dict>
 		<dict>
 			<key>PostNotification</key>
@@ -92,14 +98,32 @@
 			<string>FPS Type</string>
 			<key>validTitles</key>
 			<array>
-				<string>FPS</string>
-				<string>PFPS</string>
+				<string>Average FPS</string>
+				<string>Real-time FPS</string>
 			</array>
 			<key>validValues</key>
 			<array>
 				<integer>1</integer>
 				<integer>2</integer>
 			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>cellClass</key>
+			<string>HBColorPickerTableCell</string>
+			<key>defaults</key>
+			<string>com.ps.cahighfps</string>
+			<key>key</key>
+			<string>fpsLabelColor</string>
+			<key>default</key>
+			<string>#FF0000</string>
+			<key>label</key>
+			<string>Label Color</string>
+			<key>showAlphaSlider</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.ps.cahighfps/loadPref</string>
 		</dict>
 	</array>
 	<key>title</key>

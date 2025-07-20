@@ -1,3 +1,6 @@
+ARCHS = arm64 arm64e
+TARGET = iphone:clang:16.5:14.0
+
 BUNDLE_NAME = CAHighFPS
 $(BUNDLE_NAME)_FILES =  CAHighFPSRootListController.m 
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
@@ -6,6 +9,8 @@ $(BUNDLE_NAME)_CCFLAGS = -Wc++11-extensions -std=c++11
 $(BUNDLE_NAME)_FRAMEWORKS = UIKit
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
 $(BUNDLE_NAME)_EXTRA_FRAMEWORKS = AltList
+
+$(BUNDLE_NAME)_LIBRARIES = colorpicker
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/bundle.mk
